@@ -19,16 +19,14 @@ const pages = {
       title: 'Projects',
       type: 'item',
       url: '/projects',
-      icon: icons.LoginOutlined,
-      target: true
+      icon: icons.LoginOutlined
     },
     {
       id: 'blog',
       title: 'Blog',
       type: 'item',
       url: '/blog',
-      icon: icons.ProfileOutlined,
-      target: true
+      icon: icons.ProfileOutlined
     }
   ]
 };
