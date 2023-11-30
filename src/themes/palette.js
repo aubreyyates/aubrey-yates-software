@@ -6,6 +6,7 @@ import { presetPalettes } from '@ant-design/colors';
 
 // project import
 import ThemeOption from './theme';
+import DarkThemeOption from './dark';
 
 // ==============================|| DEFAULT THEME - PALETTE  ||============================== //
 
@@ -30,29 +31,59 @@ const Palette = (mode) => {
 
   colors.grey = [...greyPrimary, ...greyAscent, ...greyConstant];
 
-  const paletteColor = ThemeOption(colors);
+  let paletteColor;
+  if (mode === 'light') {
+    paletteColor = ThemeOption(colors);
+  } else if (mode === 'dark') {
+    paletteColor = DarkThemeOption(colors);
+  } else {
+    paletteColor = ThemeOption(colors);
+  }
 
   return createTheme({
     palette: {
       mode,
-      common: {
-        black: '#000',
-        white: '#fff'
-      },
-      ...paletteColor,
-      text: {
-        primary: paletteColor.grey[700],
-        secondary: paletteColor.grey[500],
-        disabled: paletteColor.grey[400]
-      },
-      action: {
-        disabled: paletteColor.grey[300]
-      },
-      divider: paletteColor.grey[200],
-      background: {
-        paper: paletteColor.grey[0],
-        default: paletteColor.grey.A50
-      }
+      ...(mode === 'light'
+        ? {
+            common: {
+              black: '#000',
+              white: '#fff'
+            },
+            ...paletteColor,
+            text: {
+              primary: paletteColor.grey[700],
+              secondary: paletteColor.grey[500],
+              disabled: paletteColor.grey[400]
+            },
+            action: {
+              disabled: paletteColor.grey[300]
+            },
+            divider: paletteColor.grey[200],
+            background: {
+              paper: paletteColor.grey[0],
+              default: paletteColor.grey.A50
+            }
+          }
+        : {
+            common: {
+              black: '#000',
+              white: '#fff'
+            },
+            ...paletteColor,
+            text: {
+              primary: '#fff',
+              secondary: '#fff',
+              disabled: paletteColor.grey[400]
+            },
+            action: {
+              disabled: paletteColor.grey[300]
+            },
+            divider: '#000',
+            background: {
+              paper: paletteColor.darkBlue[900],
+              default: '#000'
+            }
+          })
     }
   });
 };

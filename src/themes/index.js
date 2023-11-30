@@ -13,8 +13,8 @@ import componentsOverride from './overrides';
 
 // ==============================|| DEFAULT THEME - MAIN  ||============================== //
 
-export default function ThemeCustomization({ children }) {
-  const theme = Palette('light', 'default');
+export default function ThemeCustomization({ themeMode: themeMode, children }) {
+  const theme = Palette(themeMode, 'default');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const themeTypography = Typography();

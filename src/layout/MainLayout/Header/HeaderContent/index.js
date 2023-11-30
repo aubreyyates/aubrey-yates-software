@@ -7,11 +7,17 @@ import Search from './Search';
 import Button from '@mui/material/Button';
 // import Notification from './Notification';
 import MobileSection from './MobileSection';
+import { ThemeToggleContext } from 'themes/context';
+import { useContext } from 'react';
+
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 // ==============================|| HEADER - CONTENT ||============================== //
 
 const HeaderContent = () => {
   const matchesXs = useMediaQuery((theme) => theme.breakpoints.down('md'));
+  const { toggleTheme, themeMode } = useContext(ThemeToggleContext);
 
   return (
     <>
@@ -29,9 +35,9 @@ const HeaderContent = () => {
       >
         <GithubOutlined />
       </IconButton>
-
-      {/* <Notification /> */}
-      {/* {!matchesXs && <Profile />} */}
+      <IconButton sx={{ ml: 1, color: 'text.primary', bgcolor: 'grey.100' }} onClick={toggleTheme}>
+        {themeMode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
+      </IconButton>
       <Button sx={{ width: '150px', ml: 1 }} variant="outlined" size="medium">
         Contact Me
       </Button>
