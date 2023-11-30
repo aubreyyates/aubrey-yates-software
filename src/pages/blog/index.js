@@ -1,6 +1,9 @@
 // material-ui
 import { Grid, Typography } from '@mui/material';
 import ComponentSkeleton from 'pages/components-overview/ComponentSkeleton';
+import BlogCard from './BlogCard';
+
+import blogs from './blogs';
 
 const Blog = () => {
   return (
@@ -9,6 +12,9 @@ const Blog = () => {
         <Grid item xs={12} sx={{ mb: -2.25 }}>
           <Typography variant="h3">Blog</Typography>
         </Grid>
+        {blogs.map((blog) => (
+          <BlogCard key={blog.id} blog={blog} />
+        ))}
       </Grid>
     </ComponentSkeleton>
   );

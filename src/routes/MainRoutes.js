@@ -14,6 +14,8 @@ const ProjectManagementApp = Loadable(lazy(() => import('pages/projects/pages/Pr
 
 const Blog = Loadable(lazy(() => import('pages/blog')));
 
+const HowToEatFriedRice = Loadable(lazy(() => import('pages/blog/pages/HowToEatFriedRice')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -43,6 +45,10 @@ const MainRoutes = {
     {
       path: 'blog',
       element: <Blog />
+    },
+    {
+      path: 'blog/how-to-eat-fried-rice',
+      element: <HowToEatFriedRice />
     }
   ]
 };
