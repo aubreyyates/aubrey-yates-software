@@ -1,12 +1,14 @@
 // assets
 import { ApartmentOutlined, HomeOutlined } from '@ant-design/icons';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 // icons
 const icons = {
   HomeOutlined,
   ApartmentOutlined,
-  ChatBubbleOutlineIcon
+  ChatBubbleOutlineIcon,
+  PhoneIcon
 };
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
@@ -37,6 +39,13 @@ const pages = {
       type: 'item',
       url: '/blog',
       icon: icons.ChatBubbleOutlineIcon
+    },
+    {
+      id: 'contact',
+      title: 'Contact',
+      type: 'item',
+      url: '/contact',
+      icon: icons.PhoneIcon
     }
   ]
 };

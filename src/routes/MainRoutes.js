@@ -16,6 +16,8 @@ const Blog = Loadable(lazy(() => import('pages/blog')));
 
 const HowToEatFriedRice = Loadable(lazy(() => import('pages/blog/pages/HowToEatFriedRice')));
 
+const Contact = Loadable(lazy(() => import('pages/contact')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -49,6 +51,10 @@ const MainRoutes = {
     {
       path: 'blog/how-to-eat-fried-rice',
       element: <HowToEatFriedRice />
+    },
+    {
+      path: 'contact',
+      element: <Contact />
     }
   ]
 };

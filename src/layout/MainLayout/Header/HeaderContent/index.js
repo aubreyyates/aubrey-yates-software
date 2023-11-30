@@ -1,5 +1,5 @@
 // material-ui
-import { Box, IconButton, Link, useMediaQuery } from '@mui/material';
+import { Box, IconButton, useMediaQuery } from '@mui/material';
 import { GithubOutlined } from '@ant-design/icons';
 
 // project import
@@ -12,6 +12,7 @@ import { useContext } from 'react';
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { Link } from '../../../../../node_modules/react-router-dom/dist/index';
 
 // ==============================|| HEADER - CONTENT ||============================== //
 
@@ -38,7 +39,8 @@ const HeaderContent = () => {
       <IconButton sx={{ ml: 1, color: 'text.primary', bgcolor: 'grey.100' }} onClick={toggleTheme}>
         {themeMode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
       </IconButton>
-      <Button sx={{ width: '150px', ml: 1 }} variant="outlined" size="medium">
+
+      <Button sx={{ width: '150px', ml: 1 }} variant="outlined" size="medium" component={Link} to="contact">
         Contact Me
       </Button>
       {matchesXs && <MobileSection />}
