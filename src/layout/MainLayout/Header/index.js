@@ -8,7 +8,14 @@ import { AppBar, IconButton, Toolbar, useMediaQuery } from '@mui/material';
 import AppBarStyled from './AppBarStyled';
 
 // assets
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+// import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+import HeaderContent from './HeaderContent';
+
+// import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
 // ==============================|| MAIN LAYOUT - HEADER ||============================== //
 
@@ -30,8 +37,9 @@ const Header = ({ open, handleDrawerToggle }) => {
         color="secondary"
         sx={{ color: 'text.primary', bgcolor: open ? iconBackColorOpen : iconBackColor, ml: { xs: 0, lg: -2 } }}
       >
-        {!open ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        {!open ? <KeyboardArrowRightIcon /> : <KeyboardArrowLeftIcon />}
       </IconButton>
+      <HeaderContent />
     </Toolbar>
   );
 

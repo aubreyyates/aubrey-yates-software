@@ -18,7 +18,6 @@ const ProjectPage = ({ project: project, technologies: technologies, links: link
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <Typography variant="p">Links</Typography>
         <Typography variant="p">Code: {links.code}</Typography>
-        {/* <Typography variant="p">Code: {links.code}</Typography> */}
       </Grid>
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         {children}
