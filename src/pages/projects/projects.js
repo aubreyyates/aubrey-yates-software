@@ -1,17 +1,17 @@
 const projects = [
   {
     id: 1,
-    name: 'Website',
-    description: 'blah blah blah',
-    link: 'website',
-    imageUrl: 'website'
+    name: 'Tasks App',
+    description: 'An app that keeps track of tasks.',
+    link: 'tasks-app',
+    imageUrl: 'tasks-app'
   },
   {
     id: 2,
-    name: 'Project Managent App',
-    description: 'blah blah blah',
-    link: 'project-management-app',
-    imageUrl: 'project-management-app'
+    name: 'Stopwatch App',
+    description: 'A stopwatch that keeps time and contains stopwatch history.',
+    link: 'stopwatch-app',
+    imageUrl: 'stopwatch-app'
   }
 ];
 

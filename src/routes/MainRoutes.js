@@ -11,6 +11,8 @@ const Projects = Loadable(lazy(() => import('pages/projects')));
 
 const Website = Loadable(lazy(() => import('pages/projects/pages/Website')));
 const ProjectManagementApp = Loadable(lazy(() => import('pages/projects/pages/ProjectManagementApp')));
+const StopwatchApp = Loadable(lazy(() => import('pages/projects/pages/StopwatchApp')));
+const TasksApp = Loadable(lazy(() => import('pages/projects/pages/TasksApp')));
 
 const Blog = Loadable(lazy(() => import('pages/blog')));
 
@@ -43,6 +45,14 @@ const MainRoutes = {
     {
       path: 'projects/project-management-app',
       element: <ProjectManagementApp />
+    },
+    {
+      path: 'projects/stopwatch-app',
+      element: <StopwatchApp />
+    },
+    {
+      path: 'projects/tasks-app',
+      element: <TasksApp />
     },
     {
       path: 'blog',

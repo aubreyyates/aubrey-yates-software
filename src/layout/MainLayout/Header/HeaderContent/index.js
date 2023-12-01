@@ -29,9 +29,8 @@ const HeaderContent = () => {
         component={Link}
         href="https://github.com/aubreyyates"
         target="_blank"
-        disableRipple
         color="secondary"
-        title="Download Free Version"
+        title="GitHub Link"
         sx={{ color: 'text.primary', bgcolor: 'grey.100' }}
       >
         <GithubOutlined />

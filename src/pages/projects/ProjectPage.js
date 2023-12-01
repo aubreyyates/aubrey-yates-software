@@ -1,5 +1,8 @@
 // material-ui
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Chip } from '@mui/material';
+import Button from '@mui/material/Button';
+import { GithubOutlined } from '@ant-design/icons';
+import { Link } from '../../../node_modules/react-router-dom/dist/index';
 
 const ProjectPage = ({ project: project, technologies: technologies, links: links, children }) => {
   return (
@@ -7,17 +10,31 @@ const ProjectPage = ({ project: project, technologies: technologies, links: link
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <Typography variant="h2">{project.name}</Typography>
       </Grid>
-      <Grid item xs={12} sx={{ mb: -2.25 }}>
-        <Typography variant="p">Technologies Used</Typography>
-        <ul>
-          {technologies.map((technology, index) => (
-            <li key={index}>{technology}</li>
-          ))}
-        </ul>
+      <Grid item xs={12} sx={{ mb: -4 }}>
+        <Typography variant="p">Technologies Used:</Typography>
       </Grid>
-      <Grid item xs={12} sx={{ mb: -2.25 }}>
+      <Grid item xs={12} sx={{ mb: -2 }}>
+        {technologies.map((technology, index) => (
+          <Chip key={index} label={technology} sx={{ mr: 1 }} />
+        ))}
+      </Grid>
+      {/* <Grid item xs={12} sx={{ mb: -2.25 }}>
         <Typography variant="p">Links</Typography>
-        <Typography variant="p">Code: {links.code}</Typography>
+      </Grid> */}
+      <Grid item xs={12} sx={{ mb: -2.25 }}>
+        <Button
+          component={Link}
+          to={links.code}
+          variant="outlined"
+          target="_blank"
+          color="secondary"
+          sx={{ width: '80px', color: 'text.primary', bgcolor: 'grey.100' }}
+        >
+          <GithubOutlined />
+          <Typography variant="p" sx={{ ml: 1 }}>
+            Repo
+          </Typography>
+        </Button>
       </Grid>
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         {children}
