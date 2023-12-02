@@ -10,7 +10,7 @@ import ThreeSphere from 'components/ThreeSphere';
 
 const Contact = () => {
   return (
-    <Grid container rowSpacing={4.5} columnSpacing={2.75} sx={{ p: { xs: 2, sm: 3 } }}>
+    <Grid container rowSpacing={4.5} columnSpacing={2.75}>
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <Typography variant="h3">Contact</Typography>
       </Grid>

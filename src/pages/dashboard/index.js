@@ -7,7 +7,7 @@ import HomeOverlay from './HomeOverlay';
 
 const DashboardDefault = () => {
   return (
-    <Grid sx={{ p: { xs: 2, sm: 3 } }}>
+    <Grid>
       <div style={{ height: '900px', position: 'relative' }}>
         <ThreeComponent></ThreeComponent>
         <HomeOverlay></HomeOverlay>
