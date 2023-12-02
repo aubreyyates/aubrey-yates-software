@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import * as THREE from 'three';
 import { useTheme } from '@mui/material/styles';
 
@@ -10,17 +10,25 @@ import css from 'assets/images/icons/css.png';
 const ThreeComponent = () => {
   const ref = useRef();
   const theme = useTheme();
+  const height = 900;
 
-  useEffect(() => {
+  const scene = new THREE.Scene();
+  const renderer = new THREE.WebGLRenderer();
+
+  useLayoutEffect(() => {
     const parent = ref.current;
-    const width = parent.clientWidth - 22;
-    const height = 900;
+    const width = parent.clientWidth;
 
-    const scene = new THREE.Scene();
+    setTimeout(() => {
+      const newWidth = parent.clientWidth;
+      camera.aspect = newWidth / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(newWidth, height);
+    }, 500); // Timeout with 0 ms
+
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
 
-    renderer.setSize(width, height);
+    renderer.setSize(0, 0);
     renderer.setClearColor(theme.palette.background.default, 1); // Set background color to white
 
     ref.current.appendChild(renderer.domElement);
@@ -106,6 +114,15 @@ const ThreeComponent = () => {
 
     camera.position.z = 10;
 
+    const onWindowResize = () => {
+      const newWidth = parent.clientWidth;
+      camera.aspect = newWidth / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(newWidth, height);
+    };
+
+    window.addEventListener('resize', onWindowResize);
+
     const animate = () => {
       requestAnimationFrame(animate);
       cube1.rotation.x += 0.01;
@@ -148,10 +165,11 @@ const ThreeComponent = () => {
 
     return () => {
       parent.removeChild(renderer.domElement);
+      // window.removeEventListener('resize', onWindowResize);
     };
   }, [theme.palette.primary.main, theme.palette.background.default]);
 
-  return <div ref={ref} />;
+  return <div ref={ref}></div>;
 };
 
 export default ThreeComponent;

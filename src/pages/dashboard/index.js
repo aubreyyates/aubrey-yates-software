@@ -1,14 +1,18 @@
-import ThreeComponent from 'components/Three';
+import { Grid } from '@mui/material';
+
+import ThreeComponent from 'components/ThreeComponent';
 import HomeOverlay from './HomeOverlay';
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
 const DashboardDefault = () => {
   return (
-    <div style={{ height: '70vh', position: 'relative' }}>
-      <ThreeComponent></ThreeComponent>
-      <HomeOverlay></HomeOverlay>
-    </div>
+    <Grid sx={{ p: { xs: 2, sm: 3 } }}>
+      <div style={{ height: '900px', position: 'relative' }}>
+        <ThreeComponent></ThreeComponent>
+        <HomeOverlay></HomeOverlay>
+      </div>
+    </Grid>
   );
 };
 
