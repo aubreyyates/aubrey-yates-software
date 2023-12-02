@@ -24,7 +24,7 @@ const ThreeComponent = () => {
       camera.aspect = newWidth / height;
       camera.updateProjectionMatrix();
       renderer.setSize(newWidth, height);
-    }, 500); // Timeout with 0 ms
+    }, 400); // Timeout with 0 ms
 
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 
@@ -169,7 +169,7 @@ const ThreeComponent = () => {
     };
   }, [theme.palette.primary.main, theme.palette.background.default]);
 
-  return <div ref={ref}></div>;
+  return <div style={{ display: 'flex', justifyContent: 'center' }} ref={ref}></div>;
 };
 
 export default ThreeComponent;

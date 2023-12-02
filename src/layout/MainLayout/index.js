@@ -51,7 +51,7 @@ const MainLayout = () => {
       <Box component="main" sx={{ width: '100%', flexGrow: 1, p: { xs: 2, sm: 3 } }}>
         <Toolbar />
         {/* <Breadcrumbs navigation={navigation} title /> */}
-        <Outlet />
+        <Outlet context={open} />
       </Box>
     </Box>
   );
