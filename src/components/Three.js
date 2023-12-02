@@ -2,6 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { useTheme } from '@mui/material/styles';
 
+import dotnet from 'assets/images/icons/dotnet.png';
+import webdesign from 'assets/images/icons/react.png';
+import html5 from 'assets/images/icons/html5.png';
+import css from 'assets/images/icons/css.png';
+
 const ThreeComponent = () => {
   const ref = useRef();
   const theme = useTheme();
@@ -27,12 +32,16 @@ const ThreeComponent = () => {
     });
 
     const cube1 = new THREE.Mesh(geometry, material);
-    cube1.position.set(6, 3, 0);
+    cube1.position.set(5, 4, 0);
     scene.add(cube1);
 
     const cube2 = new THREE.Mesh(geometry, material);
     cube2.position.set(-18, 3, -16);
     scene.add(cube2);
+
+    const cube3 = new THREE.Mesh(geometry, material);
+    cube3.position.set(1, -6, -5);
+    scene.add(cube3);
 
     const coneGeometry = new THREE.ConeGeometry(1, 2, 3);
     const cone1 = new THREE.Mesh(coneGeometry, material);
@@ -44,14 +53,16 @@ const ThreeComponent = () => {
     scene.add(cone2);
 
     const cone3 = new THREE.Mesh(coneGeometry, material);
-    cone3.position.set(-5, -11, -18);
+    cone3.position.set(-7, -11, -18);
     scene.add(cone3);
 
-    // IcosahedronGeometry
+    const cone4 = new THREE.Mesh(coneGeometry, material);
+    cone4.position.set(5, 19, -20);
+    scene.add(cone4);
 
     const icosahedronGeometry = new THREE.IcosahedronGeometry(1, 0);
     const icosahedron = new THREE.Mesh(icosahedronGeometry, material);
-    icosahedron.position.set(-8, -3, -4);
+    icosahedron.position.set(-8, -4, -4);
     scene.add(icosahedron);
 
     const octahedronGeometry = new THREE.OctahedronGeometry(1, 0);
@@ -60,8 +71,38 @@ const ThreeComponent = () => {
     scene.add(octahedron1);
 
     const octahedron2 = new THREE.Mesh(octahedronGeometry, material);
-    octahedron2.position.set(2, 11, -9);
+    octahedron2.position.set(-4, 12, -9);
     scene.add(octahedron2);
+
+    const textureLoader = new THREE.TextureLoader();
+    const texture1 = textureLoader.load(dotnet); // Replace with your image path
+    const circle1Material = new THREE.MeshMatcapMaterial({ map: texture1 });
+
+    const texture2 = textureLoader.load(webdesign); // Replace with your image path
+    const circle2Material = new THREE.MeshMatcapMaterial({ map: texture2 });
+
+    const texture3 = textureLoader.load(html5); // Replace with your image path
+    const circle3Material = new THREE.MeshMatcapMaterial({ map: texture3 });
+
+    const texture4 = textureLoader.load(css); // Replace with your image path
+    const circle4Material = new THREE.MeshMatcapMaterial({ map: texture4 });
+
+    const cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.2, 64);
+    const cylinder1 = new THREE.Mesh(cylinderGeometry, circle1Material);
+    cylinder1.position.set(-21, 7, -14);
+    scene.add(cylinder1);
+
+    const cylinder2 = new THREE.Mesh(cylinderGeometry, circle2Material);
+    cylinder2.position.set(27, 24, -28);
+    scene.add(cylinder2);
+
+    const cylinder3 = new THREE.Mesh(cylinderGeometry, circle3Material);
+    cylinder3.position.set(16, -6, -13);
+    scene.add(cylinder3);
+
+    const cylinder4 = new THREE.Mesh(cylinderGeometry, circle4Material);
+    cylinder4.position.set(-12, -14, -18);
+    scene.add(cylinder4);
 
     camera.position.z = 10;
 
@@ -71,6 +112,8 @@ const ThreeComponent = () => {
       cube1.rotation.y += 0.01;
       cube2.rotation.x += 0.01;
       cube2.rotation.y += 0.01;
+      cube3.rotation.x += 0.01;
+      cube3.rotation.y += 0.01;
 
       cone1.rotation.x += 0.01;
       cone1.rotation.y += 0.01;
@@ -78,6 +121,17 @@ const ThreeComponent = () => {
       cone2.rotation.y += 0.01;
       cone3.rotation.x += 0.01;
       cone3.rotation.y += 0.01;
+      cone4.rotation.x += 0.01;
+      cone4.rotation.y += 0.01;
+
+      cylinder1.rotation.x += 0.01;
+      cylinder1.rotation.y += 0.01;
+      cylinder2.rotation.x -= 0.01;
+      cylinder2.rotation.y -= 0.01;
+      cylinder3.rotation.x += 0.01;
+      cylinder3.rotation.y += 0.01;
+      cylinder4.rotation.x -= 0.01;
+      cylinder4.rotation.y -= 0.01;
 
       icosahedron.rotation.x += 0.01;
       icosahedron.rotation.y += 0.01;

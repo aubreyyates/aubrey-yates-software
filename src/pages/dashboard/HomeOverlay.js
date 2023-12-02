@@ -40,7 +40,6 @@ const HomeOverlay = () => {
 
         <Grid item xs={3} sx={{ mb: -2.25 }}></Grid>
         <Grid item xs={6} sx={{ mb: -2.25 }}>
-          {' '}
           {technologies.map((technology, index) => (
             <Chip key={index} label={technology} sx={{ mb: 1, mr: 1 }} />
           ))}

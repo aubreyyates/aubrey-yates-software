@@ -4,7 +4,8 @@ const blogs = [
     name: 'Implement a repository in ASP.NET Core',
     description: 'Why you want to implement a repository in your ASP.NET Core application.',
     link: 'implement-repository-aspnet-core',
-    imageUrl: 'repository'
+    imageUrl: 'repository',
+    technologies: ['dotnet']
   }
 ];
 

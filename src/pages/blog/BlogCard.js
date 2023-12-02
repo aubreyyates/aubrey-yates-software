@@ -5,6 +5,7 @@ import { Grid, Typography } from '@mui/material';
 import MainCard from 'components/MainCard';
 import ComponentSkeleton from 'pages/components-overview/ComponentSkeleton';
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
+import DotNet from './technologyCards/DotNet';
 
 const BlogCard = ({ blog: blog }) => {
   const imagePath = require(`assets/images/blogs/${blog.imageUrl}.jpg`);
@@ -14,7 +15,10 @@ const BlogCard = ({ blog: blog }) => {
       <Grid item xs={12} md={6} lg={4}>
         <Link to={blog.link} style={{ textDecoration: 'none' }}>
           <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: '302px' }} content={false}>
-            <Grid item>
+            <Grid item sx={{ position: 'relative' }}>
+              {blog.technologies.includes('dotnet') && <DotNet />}
+              {/* ({blog.technologies.contains('react')} && <DotNet />)
+              ({blog.technologies.contains('dotnet')} && <DotNet />) */}
               <div>
                 <img src={imagePath} style={{ width: '100%', height: 'auto' }} alt="blog" />
               </div>
