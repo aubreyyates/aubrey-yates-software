@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 
 // project import
 import DrawerHeaderStyled from './DrawerHeaderStyled';
-import Logo from 'components/Logo';
+import Logo from 'components/Logo/Logo';
 import Box from '@mui/material/Box';
 
 // ==============================|| DRAWER HEADER ||============================== //
@@ -18,7 +18,7 @@ const DrawerHeader = ({ open }) => {
     // only available in paid version
     <DrawerHeaderStyled theme={theme} open={open}>
       <Box display="flex" alignItems="center" justifyContent="center" height="100%">
-        <Logo />
+        <Logo ratio={1} />
       </Box>
     </DrawerHeaderStyled>
   );

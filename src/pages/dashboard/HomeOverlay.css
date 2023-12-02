@@ -1,0 +1,13 @@
+#home-overlay {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+#home-logo {
+  position: relative;
+  margin-top: 28vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+}

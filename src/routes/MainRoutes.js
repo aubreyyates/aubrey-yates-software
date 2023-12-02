@@ -16,7 +16,7 @@ const TasksApp = Loadable(lazy(() => import('pages/projects/pages/TasksApp')));
 
 const Blog = Loadable(lazy(() => import('pages/blog')));
 
-const HowToEatFriedRice = Loadable(lazy(() => import('pages/blog/pages/HowToEatFriedRice')));
+const ImplementRepository = Loadable(lazy(() => import('pages/blog/pages/implementRepository/ImplementRepository')));
 
 const Contact = Loadable(lazy(() => import('pages/contact')));
 
@@ -59,8 +59,8 @@ const MainRoutes = {
       element: <Blog />
     },
     {
-      path: 'blog/how-to-eat-fried-rice',
-      element: <HowToEatFriedRice />
+      path: 'blog/implement-repository-aspnet-core',
+      element: <ImplementRepository />
     },
     {
       path: 'contact',

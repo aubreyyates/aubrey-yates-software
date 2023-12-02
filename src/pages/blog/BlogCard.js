@@ -12,11 +12,11 @@ const BlogCard = ({ blog: blog }) => {
   return (
     <ComponentSkeleton>
       <Grid item xs={12} md={6} lg={4}>
-        <Link to={blog.link}>
-          <MainCard sx={{ mt: 2, boxShadow: 2 }} content={false}>
+        <Link to={blog.link} style={{ textDecoration: 'none' }}>
+          <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: '302px' }} content={false}>
             <Grid item>
               <div>
-                <img src={imagePath} alt="blog" />
+                <img src={imagePath} style={{ width: '100%', height: 'auto' }} alt="blog" />
               </div>
             </Grid>
             <Grid item sx={{ p: 1 }}>
