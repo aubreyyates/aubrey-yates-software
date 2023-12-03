@@ -66,7 +66,7 @@ const Projects = () => {
               </InputLabel>
               <Select labelId="technology-filter-label" value={technology} label="Technology" onChange={handleChangeTechnology}>
                 <MenuItem value="any">Any</MenuItem>
-                <MenuItem value="react-js">React JS</MenuItem>
+                <MenuItem value="react">React JS</MenuItem>
                 <MenuItem value="dotnet">.NET</MenuItem>
                 <MenuItem value="php">PHP</MenuItem>
               </Select>
@@ -79,13 +79,13 @@ const Projects = () => {
               </InputLabel>
               <Select labelId="year-filter-label" value={year} label="Year" onChange={handleChangeYear}>
                 <MenuItem value="any">Any</MenuItem>
-                <MenuItem value="react-js">2023</MenuItem>
-                <MenuItem value="dotnet">2022</MenuItem>
-                <MenuItem value="php">2021</MenuItem>
-                <MenuItem value="php">2020</MenuItem>
-                <MenuItem value="php">2019</MenuItem>
-                <MenuItem value="php">2018</MenuItem>
-                <MenuItem value="php">2017</MenuItem>
+                <MenuItem value="2023">2023</MenuItem>
+                <MenuItem value="2022">2022</MenuItem>
+                <MenuItem value="2021">2021</MenuItem>
+                <MenuItem value="2020">2020</MenuItem>
+                <MenuItem value="2019">2019</MenuItem>
+                <MenuItem value="2018">2018</MenuItem>
+                <MenuItem value="2017">2017</MenuItem>
               </Select>
             </FormControl>
           )}

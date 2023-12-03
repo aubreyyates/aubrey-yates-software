@@ -8,10 +8,10 @@ const project = {
   name: 'Tasks App'
 };
 
-const technologies = ['JavaScript', 'JQuery', 'HTML', 'CSS'];
+const technologies = ['PHP', 'JavaScript', 'JQuery', 'HTML', 'CSS'];
 
 const links = {
-  code: 'https://github.com/aubreyyates'
+  code: 'https://github.com/aubreyyates/tasks-app'
 };
 
 const TasksApp = () => {

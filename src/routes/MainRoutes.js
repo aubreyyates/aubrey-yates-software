@@ -9,7 +9,7 @@ const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
 
 const Projects = Loadable(lazy(() => import('pages/projects')));
 
-const Website = Loadable(lazy(() => import('pages/projects/pages/Website')));
+const AubreyYatesSoftware = Loadable(lazy(() => import('pages/projects/pages/AubreyYatesSoftware')));
 const ProjectManagementApp = Loadable(lazy(() => import('pages/projects/pages/ProjectManagementApp')));
 const StopwatchApp = Loadable(lazy(() => import('pages/projects/pages/StopwatchApp')));
 const TasksApp = Loadable(lazy(() => import('pages/projects/pages/TasksApp')));
@@ -39,8 +39,8 @@ const MainRoutes = {
       element: <Projects />
     },
     {
-      path: 'projects/website',
-      element: <Website />
+      path: 'projects/aubrey-yates-software',
+      element: <AubreyYatesSoftware />
     },
     {
       path: 'projects/project-management-app',

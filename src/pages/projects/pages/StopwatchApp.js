@@ -11,7 +11,7 @@ const project = {
 const technologies = ['PHP', 'JavaScript', 'Moment JS', 'HTML', 'CSS'];
 
 const links = {
-  code: 'https://github.com/aubreyyates'
+  code: 'https://github.com/aubreyyates/stopwatch-app'
 };
 
 const Website = () => {

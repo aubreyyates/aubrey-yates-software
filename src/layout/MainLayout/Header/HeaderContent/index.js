@@ -1,5 +1,5 @@
 // material-ui
-import { Box, IconButton, useMediaQuery } from '@mui/material';
+import { Box, IconButton, useMediaQuery, Link } from '@mui/material';
 import { GithubOutlined } from '@ant-design/icons';
 
 // project import
@@ -12,7 +12,6 @@ import { useContext } from 'react';
 
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { Link } from '../../../../../node_modules/react-router-dom/dist/index';
 
 // ==============================|| HEADER - CONTENT ||============================== //
 
