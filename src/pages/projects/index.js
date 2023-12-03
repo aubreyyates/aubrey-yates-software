@@ -67,6 +67,7 @@ const Projects = () => {
               <Select labelId="technology-filter-label" value={technology} label="Technology" onChange={handleChangeTechnology}>
                 <MenuItem value="any">Any</MenuItem>
                 <MenuItem value="react">React JS</MenuItem>
+                <MenuItem value="electron">Electron</MenuItem>
                 <MenuItem value="dotnet">.NET</MenuItem>
                 <MenuItem value="php">PHP</MenuItem>
               </Select>

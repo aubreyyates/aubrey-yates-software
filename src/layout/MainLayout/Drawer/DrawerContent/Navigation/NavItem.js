@@ -45,7 +45,7 @@ const NavItem = ({ item, level }) => {
     // eslint-disable-next-line
   }, [pathname]);
 
-  const textColor = 'text.primary';
+  const textColor = 'primary.drawerText';
   const iconSelectedColor = 'primary.main';
 
   return (

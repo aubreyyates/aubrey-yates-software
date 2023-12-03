@@ -35,6 +35,8 @@ const Theme = (colors) => {
       700: blue[7],
       darker: blue[8],
       900: blue[9],
+      drawer: '#fff',
+      drawerText: grey[700],
       contrastText
     },
     secondary: {

@@ -13,6 +13,7 @@ const AubreyYatesSoftware = Loadable(lazy(() => import('pages/projects/pages/Aub
 const ProjectManagementApp = Loadable(lazy(() => import('pages/projects/pages/ProjectManagementApp')));
 const StopwatchApp = Loadable(lazy(() => import('pages/projects/pages/StopwatchApp')));
 const TasksApp = Loadable(lazy(() => import('pages/projects/pages/TasksApp')));
+const RadAnat = Loadable(lazy(() => import('pages/projects/pages/RadAnat')));
 
 const Blog = Loadable(lazy(() => import('pages/blog')));
 
@@ -53,6 +54,10 @@ const MainRoutes = {
     {
       path: 'projects/tasks-app',
       element: <TasksApp />
+    },
+    {
+      path: 'projects/rad-anat',
+      element: <RadAnat />
     },
     {
       path: 'blog',

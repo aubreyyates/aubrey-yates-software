@@ -8,6 +8,7 @@ import { Link } from '../../../node_modules/react-router-dom/dist/index';
 import Php from 'components/technologyCards/Php';
 import DotNet from 'components/technologyCards/DotNet';
 import React from 'components/technologyCards/React';
+import Electron from 'components/technologyCards/Electron';
 
 const ProjectCard = ({ project: project }) => {
   const imagePath = require(`assets/images/projects/${project.imageUrl}/main.jpg`);
@@ -21,6 +22,7 @@ const ProjectCard = ({ project: project }) => {
               {project.technologies.includes('php') && <Php />}
               {project.technologies.includes('react') && <React />}
               {project.technologies.includes('dotnet') && <DotNet />}
+              {project.technologies.includes('electron') && <Electron />}
               <div>
                 <img src={imagePath} style={{ width: '100%', height: 'auto' }} alt="project" />
               </div>
