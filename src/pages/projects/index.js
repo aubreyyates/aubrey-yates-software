@@ -35,6 +35,13 @@ const Projects = () => {
     setSize(event.target.value);
   };
 
+  const getFilteredProjects = () => {
+    if (technology === 'any') {
+      return projects;
+    }
+    return projects.filter((project) => project.technologies.includes(technology));
+  };
+
   return (
     <ComponentSkeleton>
       <Grid container rowSpacing={4.5} columnSpacing={2.75}>
@@ -48,8 +55,8 @@ const Projects = () => {
             </InputLabel>
             <Select labelId="technology-filter-label" value={filter} label="Technology" onChange={handleChangeFilter}>
               <MenuItem value="technology">Technology</MenuItem>
-              <MenuItem value="year">Year</MenuItem>
-              <MenuItem value="size">Size</MenuItem>
+              {/* <MenuItem value="year">Year</MenuItem>
+              <MenuItem value="size">Size</MenuItem> */}
             </Select>
           </FormControl>
           {filter === 'technology' && (
@@ -96,7 +103,7 @@ const Projects = () => {
             </FormControl>
           )}
         </Grid>
-        {projects.map((project) => (
+        {getFilteredProjects().map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </Grid>

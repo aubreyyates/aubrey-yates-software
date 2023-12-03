@@ -2,6 +2,8 @@ import React, { useRef, useLayoutEffect } from 'react';
 import * as THREE from 'three';
 import { useTheme } from '@mui/material/styles';
 
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 import dotnet from 'assets/images/icons/dotnet.png';
 import webdesign from 'assets/images/icons/react.png';
 import html5 from 'assets/images/icons/html5.png';
@@ -27,6 +29,8 @@ const ThreeComponent = () => {
     }, 400); // Timeout with 0 ms
 
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
 
     renderer.setSize(0, 0);
     renderer.setClearColor(theme.palette.background.default, 1); // Set background color to white
@@ -157,6 +161,8 @@ const ThreeComponent = () => {
       octahedron1.rotation.y += 0.01;
       octahedron2.rotation.x += 0.01;
       octahedron2.rotation.y += 0.01;
+
+      controls.update();
 
       renderer.render(scene, camera);
     };

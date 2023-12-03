@@ -1,5 +1,5 @@
 // material-ui
-import { Grid, Typography, Chip, Button } from '@mui/material';
+import { Grid, Typography, Chip, Button, useMediaQuery } from '@mui/material';
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
 
 import Logo from 'components/Logo/Logo';
@@ -26,12 +26,17 @@ const technologies = [
 ];
 
 const HomeOverlay = () => {
+  const matchesXs = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
     <div id="home-overlay">
-      <div id="home-logo">
-        <Logo ratio={2} />
-      </div>
       <Grid container rowSpacing={4.5} columnSpacing={2.75}>
+        <Grid item xs={12} sx={{ mb: -2.25 }}>
+          <div id="home-logo">
+            <Logo ratio={matchesXs ? 1.2 : 2} />
+          </div>
+        </Grid>
+
         <Grid item xs={3} sx={{ mb: -2.25 }}></Grid>
         <Grid item xs={6} sx={{ mb: -2.25 }}>
           <Typography variant="h3">Skills</Typography>

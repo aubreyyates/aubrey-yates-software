@@ -17,7 +17,7 @@ const Contact = () => {
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: '302px' }} content={false}>
           <Grid container>
-            <Grid item xs={6} sx={{ p: 2 }}>
+            <Grid item xs={12} md={6} sx={{ p: 2 }}>
               <Grid item xs={12}>
                 <Typography variant="h4" sx={{ mb: 2 }}>
                   Location: Iowa City, IA
@@ -32,8 +32,14 @@ const Contact = () => {
               </Grid>
             </Grid>
 
-            <Grid item xs={6}>
-              <img src={selfImage} alt="Aubrey Yates"></img>
+            <Grid item xs={12} md={6}>
+              <Grid container>
+                <Grid item xs={3} lg={0}></Grid>
+                <Grid item xs={6} lg={12}>
+                  <img src={selfImage} alt="Aubrey Yates"></img>
+                </Grid>
+                <Grid item xs={3} lg={0}></Grid>
+              </Grid>
             </Grid>
           </Grid>
         </MainCard>

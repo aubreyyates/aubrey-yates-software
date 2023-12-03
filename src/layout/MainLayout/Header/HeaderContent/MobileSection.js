@@ -5,12 +5,13 @@ import { useTheme } from '@mui/material/styles';
 import { AppBar, Box, ClickAwayListener, IconButton, Paper, Popper, Toolbar } from '@mui/material';
 
 // project import
-import Search from './Search';
-import Profile from './Profile';
+
 import Transitions from 'components/@extended/Transitions';
 
 // assets
-import { MoreOutlined } from '@ant-design/icons';
+import MenuIcon from '@mui/icons-material/Menu';
+
+import MobileNavigation from 'layout/MainLayout/Drawer/DrawerContent/MobileNavigation/index';
 
 // ==============================|| HEADER CONTENT - MOBILE ||============================== //
 
@@ -56,7 +57,7 @@ const MobileSection = () => {
           onClick={handleToggle}
           color="inherit"
         >
-          <MoreOutlined />
+          <MenuIcon />
         </IconButton>
       </Box>
       <Popper
@@ -86,8 +87,7 @@ const MobileSection = () => {
               <ClickAwayListener onClickAway={handleClose}>
                 <AppBar color="inherit">
                   <Toolbar>
-                    <Search />
-                    <Profile />
+                    <MobileNavigation></MobileNavigation>
                   </Toolbar>
                 </AppBar>
               </ClickAwayListener>

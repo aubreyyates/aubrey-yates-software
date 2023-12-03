@@ -5,7 +5,7 @@ import { Grid, Typography } from '@mui/material';
 import MainCard from 'components/MainCard';
 import ComponentSkeleton from 'pages/components-overview/ComponentSkeleton';
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
-import DotNet from './technologyCards/DotNet';
+import DotNet from '../../components/technologyCards/DotNet';
 
 const BlogCard = ({ blog: blog }) => {
   const imagePath = require(`assets/images/blogs/${blog.imageUrl}.jpg`);

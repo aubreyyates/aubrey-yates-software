@@ -8,7 +8,8 @@ import { ThemeToggleContext } from 'themes/context';
 // ==============================|| APP - THEME, ROUTER, LOCAL  ||============================== //
 
 const App = () => {
-  const [themeMode, setThemeMode] = useState('light');
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [themeMode, setThemeMode] = useState(prefersDarkMode ? 'dark' : 'light');
 
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
