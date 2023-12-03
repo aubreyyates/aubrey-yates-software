@@ -24,8 +24,8 @@ const TasksApp = () => {
       <img src={homeImage} alt="home-page" width="100%"></img>
       <br />
       <br />
-      On the tasks page, your tasks are listed for you. The priority is colored green, yellow, or red. You can create new tasks. You can
-      also mark the tasks as complete with the check button. The tasks page has a simple undo mechanism too.
+      On the tasks page, your tasks are listed for you. The priority is colored green, yellow, or red. On the tasks page, you can create new
+      tasks. You can also mark the tasks as complete with the check button. The tasks page also has a simple undo mechanism.
       <br />
       <br />
       <img src={mainImage} alt="tasks-page" width="100%"></img>
