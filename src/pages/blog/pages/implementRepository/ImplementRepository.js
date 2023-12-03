@@ -22,21 +22,20 @@ const ImplementRepository = () => {
       Implementing a repository in your ASP.NET Core application is important if you have many database queries. As your application grows,
       it becomes difficult to keep track of all of them. If the database changes, you may have to go through all of your queries and fix
       them to work with a new structure. This is not ideal if your queries are scattered throughout your controllers or razor pages.
-      repositories allow you to organize them into a logical location.
+      Repositories allow you to organize them into a logical location.
       <br />
       <br />
       Another benefit of using a repository is that you can test your code easier because you can use interfaces instead of running tests
-      directly on your database. Running tests directly on a database is often not good since databases have volatility and the data can
-      change.
+      directly on your database. Running tests directly on a database is often not good since databases are high volatility.
       <br />
       <br />
       {"Let's"} say we have an API that returns comments. Our Comment model looks like the following.
       <CodeSnippet language="csharp">{snippet1}</CodeSnippet>
-      We have an endpoint for getting all of our comments and an endpoint for getting a single commoent by the ID. Our API Controller looks
+      We have an endpoint for getting all of our comments and an endpoint for getting a single comment by the ID. Our API Controller looks
       like the following.
       <CodeSnippet language="csharp">{snippet2}</CodeSnippet>
       This is simple and easy to follow, but we {"shouldn't"} be using the DbContext in our API. {"Let's"} create an interface for a
-      repository. Right now, we just have two methods that we need GetAllCommentsAsync and GetCommentWithIdAsync. The interface will look
+      repository. Right now, we will have just two methods called GetAllCommentsAsync and GetCommentWithIdAsync. The interface will look
       like the following.
       <CodeSnippet language="csharp">{snippet3}</CodeSnippet>
       Now, {"let's"} create a concrete class that implements the interface. It will look like the following.
@@ -45,11 +44,10 @@ const ImplementRepository = () => {
       we put in the repository. That would look like the following.
       <CodeSnippet language="csharp">{snippet5}</CodeSnippet>
       Lastly, in our Program.cs file, we need to add the ICommentRepository and CommentRepository as a service so that the dependency
-      container can inject it into the contructor of the API controller. The following lines need to be added to the Program.cs file.
+      container can inject it into the contructor of the API controller. The following line needs to be added to the Program.cs file.
       <CodeSnippet language="csharp">{snippet6}</CodeSnippet>
       This line must go after the DbContext is added. Also, We add the repository as a scoped service because EFCore makes DbContexts scoped
-      services by default and since our repository has the DbContext as a dependency, we cannot give it a longer life cycle than any of the
-      dependencies.
+      services by default, and since our repository has the DbContext as a dependency, we cannot give it a longer life cycle than scoped.
     </BlogPage>
   );
 };

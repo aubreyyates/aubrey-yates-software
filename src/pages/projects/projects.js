@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: 'Aubrey Yates Software',
-    description: 'A website that displays projects and share information in a blog.',
+    description: 'A website that is for displaying projects and sharing information in a blog.',
     link: 'aubrey-yates-software',
     imageUrl: 'aubrey-yates-software',
     technologies: ['react']
