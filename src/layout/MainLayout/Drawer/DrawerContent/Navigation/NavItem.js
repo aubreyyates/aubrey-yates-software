@@ -60,15 +60,15 @@ const NavItem = ({ item, level }) => {
         py: !drawerOpen && level === 1 ? 1.25 : 1,
         ...(drawerOpen && {
           '&:hover': {
-            bgcolor: 'primary.lighter'
+            bgcolor: 'primary.drawerButtonHover'
           },
           '&.Mui-selected': {
-            bgcolor: 'primary.lighter',
+            bgcolor: 'primary.drawerButton',
             borderRight: `2px solid ${theme.palette.primary.main}`,
             color: iconSelectedColor,
             '&:hover': {
               color: iconSelectedColor,
-              bgcolor: 'primary.lighter'
+              bgcolor: 'primary.drawerButton'
             }
           }
         }),
@@ -89,6 +89,7 @@ const NavItem = ({ item, level }) => {
         <ListItemIcon
           sx={{
             minWidth: 28,
+            mr: 0,
             color: isSelected ? iconSelectedColor : textColor,
             ...(!drawerOpen && {
               borderRadius: 1.5,

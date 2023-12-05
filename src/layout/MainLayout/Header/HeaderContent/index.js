@@ -38,7 +38,13 @@ const HeaderContent = () => {
         {themeMode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
       </IconButton>
 
-      <Button sx={{ width: { xs: '100%', sm: '250px' }, ml: 1 }} variant="outlined" size="medium" component={Link} to="contact">
+      <Button
+        sx={{ width: { xs: '100%', sm: '250px' }, ml: 1, display: { xs: 'none', sm: 'inherit' } }}
+        variant="outlined"
+        size="medium"
+        component={Link}
+        to="contact"
+      >
         Contact Me
       </Button>
       {matchesXs && <MobileSection />}

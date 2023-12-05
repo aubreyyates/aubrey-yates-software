@@ -14,7 +14,7 @@ const Theme = (colors) => {
     700: grey[8],
     800: grey[9],
     900: grey[10],
-    A50: '#f4f4f4',
+    A50: grey[15],
     A100: grey[11],
     A200: grey[12],
     A400: grey[13],
@@ -35,7 +35,6 @@ const Theme = (colors) => {
       700: blue[7],
       darker: blue[8],
       900: blue[9],
-      page: '#fff',
       drawer: '#fff',
       drawerText: grey[700],
       contrastText

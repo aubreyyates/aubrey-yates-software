@@ -10,37 +10,37 @@ const Typography = () => ({
     fontWeight: 600,
     fontSize: '2.375rem',
     lineHeight: 1.21,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   h2: {
     fontWeight: 600,
     fontSize: '1.875rem',
     lineHeight: 1.27,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   h3: {
     fontWeight: 600,
     fontSize: '1.5rem',
     lineHeight: 1.33,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   h4: {
     fontWeight: 900,
     fontSize: '1.25rem',
     lineHeight: 1.4,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   h5: {
     fontWeight: 900,
     fontSize: '1rem',
     lineHeight: 1.5,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   h6: {
     fontWeight: 400,
     fontSize: '0.875rem',
     lineHeight: 1.57,
-    fontFamily: "'Red Hat Mono', sans-serif"
+    fontFamily: "'Comfortaa', sans-serif"
   },
   caption: {
     fontWeight: 400,
@@ -74,7 +74,8 @@ const Typography = () => ({
     lineHeight: 1.66
   },
   button: {
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    fontFamily: "'Nunito', sans-serif"
   }
 });
 

@@ -54,10 +54,15 @@ const DarkTheme = (colors) => {
       dark: darkBlue[600],
       700: darkBlue[600],
       darker: darkBlue[700],
-      900: darkBlue[800],
-      drawer: darkBlue[800],
+      900: darkBlue[900],
+      drawerButton: '#2a2a2a',
+      drawerButtonHover: '#000',
+      page: 'linear-gradient(270deg, rgb(0 0 0) 0%, rgb(29 36 47) 100%)',
+      appBar: 'linear-gradient(270deg, rgb(0 0 0) 0%, rgb(29 36 47) 100%)',
+      drawer: 'linear-gradient(0deg, rgb(15 18 23) 0%, rgb(29 36 47) 100%)',
       drawerText: '#fff',
-      contrastText
+      contrastText,
+      1000: darkBlue[900]
     },
     secondary: {
       lighter: darkBlue[300],

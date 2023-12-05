@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 // material-ui
-import { Box, List, Typography } from '@mui/material';
+import { List, Typography } from '@mui/material';
 
 // project import
 import NavItem from './NavItem';
@@ -10,8 +10,8 @@ import NavItem from './NavItem';
 // ==============================|| NAVIGATION - LIST GROUP ||============================== //
 
 const NavGroup = ({ item }) => {
-  const menu = useSelector((state) => state.menu);
-  const { drawerOpen } = menu;
+  // const menu = useSelector((state) => state.menu);
+  // const { drawerOpen } = menu;
 
   const navCollapse = item.children?.map((menuItem) => {
     switch (menuItem.type) {
@@ -32,24 +32,7 @@ const NavGroup = ({ item }) => {
     }
   });
 
-  return (
-    <List
-      subheader={
-        item.title &&
-        drawerOpen && (
-          <Box sx={{ pl: 3, mb: 1.5 }}>
-            <Typography variant="subtitle2" color="textSecondary">
-              {item.title}
-            </Typography>
-            {/* only available in paid version */}
-          </Box>
-        )
-      }
-      sx={{ mb: drawerOpen ? 1.5 : 0, py: 0, zIndex: 0 }}
-    >
-      {navCollapse}
-    </List>
-  );
+  return <List>{navCollapse}</List>;
 };
 
 NavGroup.propTypes = {

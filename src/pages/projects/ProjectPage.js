@@ -4,24 +4,20 @@ import Button from '@mui/material/Button';
 import { GithubOutlined } from '@ant-design/icons';
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
 
+import Page from 'components/Page';
+
 const ProjectPage = ({ project: project, technologies: technologies, links: links, children }) => {
   return (
-    <Grid container rowSpacing={4.5} columnSpacing={2.75}>
-      <Grid item xs={12} sx={{ mb: -2.25 }}>
-        <Typography variant="h2">{project.name}</Typography>
-      </Grid>
-      <Grid item xs={12} sx={{ mb: -4 }}>
+    <Page title={project.name}>
+      <Grid item xs={12} sx={{ mb: -4, p: 1 }}>
         <Typography variant="p">Technologies Used:</Typography>
       </Grid>
-      <Grid item xs={12} sx={{ mb: -2 }}>
+      <Grid item xs={12} sx={{ mb: -2, p: 1 }}>
         {technologies.map((technology, index) => (
-          <Chip key={index} label={technology} sx={{ mr: 1 }} />
+          <Chip key={index} label={technology} sx={{ mr: 1, mb: 1 }} />
         ))}
       </Grid>
-      {/* <Grid item xs={12} sx={{ mb: -2.25 }}>
-        <Typography variant="p">Links</Typography>
-      </Grid> */}
-      <Grid item xs={12} sx={{ mb: -2.25 }}>
+      <Grid item xs={12} sx={{ mb: -2.25, p: 1 }}>
         <Button
           component={Link}
           to={links.code}
@@ -36,10 +32,10 @@ const ProjectPage = ({ project: project, technologies: technologies, links: link
           </Typography>
         </Button>
       </Grid>
-      <Grid item xs={12} sx={{ mb: -2.25 }}>
+      <Grid item xs={12} sx={{ mb: -2.25, p: 1 }}>
         {children}
       </Grid>
-    </Grid>
+    </Page>
   );
 };
 

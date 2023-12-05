@@ -1,49 +1,68 @@
 // ==============================|| PRESET THEME - THEME SELECTOR ||============================== //
 
-const Theme = (colors) => {
-  const { blue, red, gold, cyan, green, grey } = colors;
+const DarkTheme = (colors) => {
+  const { red, gold, cyan, green, grey } = colors;
+  console.log(colors);
+
   const greyColors = {
     0: grey[0],
     50: grey[1],
-    100: grey[2],
-    200: grey[3],
+    100: '#000',
+    200: '#000',
     300: grey[4],
-    400: grey[5],
-    500: grey[6],
-    600: grey[7],
-    700: grey[8],
-    800: grey[9],
-    900: grey[10],
-    A50: '#f4f4f4',
-    A100: grey[11],
+    400: '#fff',
+    500: '#fff',
+    600: '#fff',
+    700: '#fff',
+    800: '#fff',
+    900: '#fff',
+    A50: '#fff',
+    A100: '#fff',
     A200: grey[12],
     A400: grey[13],
     A700: grey[14],
     A800: grey[16]
   };
+
+  const darkBlue = {
+    300: '#3f4661',
+    400: '#3d435c',
+    500: '#383E55',
+    600: '#32384C',
+    700: '#292E3D',
+    800: '#212531',
+    900: '#1c1e27'
+  };
+
+  // "#262832"
+  // "#1c1e27"
+
+  const orange = {
+    300: '#e1932e'
+  };
+
   const contrastText = '#fff';
 
   return {
     primary: {
-      lighter: blue[0],
-      100: blue[1],
-      200: blue[2],
-      light: blue[3],
-      400: blue[4],
-      main: blue[5],
-      dark: blue[6],
-      700: blue[7],
-      darker: blue[8],
-      900: blue[9],
-      page: '#fff',
-      drawer: '#fff',
-      drawerText: grey[700],
+      lighter: '#000',
+      100: darkBlue[300],
+      200: darkBlue[300],
+      light: darkBlue[300],
+      400: darkBlue[400],
+      main: orange[300],
+      dark: darkBlue[600],
+      700: darkBlue[600],
+      darker: darkBlue[700],
+      900: darkBlue[800],
+      drawer: darkBlue[800],
+      drawerText: '#fff',
       contrastText
     },
     secondary: {
-      lighter: greyColors[100],
-      100: greyColors[100],
-      200: greyColors[200],
+      lighter: darkBlue[300],
+      100: darkBlue[300],
+      200: darkBlue[300],
       light: greyColors[300],
       400: greyColors[400],
       main: greyColors[500],
@@ -88,8 +107,9 @@ const Theme = (colors) => {
       darker: green[9],
       contrastText
     },
-    grey: greyColors
+    grey: greyColors,
+    darkBlue: darkBlue
   };
 };
 
-export default Theme;
+export default DarkTheme;
