@@ -6,15 +6,15 @@ const blogs = [
     link: 'implement-repository-aspnet-core',
     imageUrl: 'repository',
     technologies: ['dotnet']
-  },
-  {
-    id: 2,
-    name: 'SOLID Design Principles',
-    description: 'What are SOLID design principle.',
-    link: 'solid',
-    imageUrl: 'repository',
-    technologies: ['dotnet']
   }
+  // {
+  //   id: 2,
+  //   name: 'SOLID Design Principles',
+  //   description: 'What are SOLID design principle.',
+  //   link: 'solid',
+  //   imageUrl: 'repository',
+  //   technologies: ['dotnet']
+  // }
 ];
 
 export default blogs;
