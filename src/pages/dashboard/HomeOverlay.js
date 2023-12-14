@@ -8,6 +8,9 @@ import './HomeOverlay.css';
 const technologies = [
   'ASP.NET Core 8',
   'REST APIs',
+  'EFCore',
+  'Razor Pages',
+  'MVC',
   'C#',
   'React JS',
   'JavaScript',
@@ -22,6 +25,7 @@ const technologies = [
   'Docker',
   'TypeScript',
   'UI Design',
+  'Visual Studio',
   'Design Patterns'
 ];
 

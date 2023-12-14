@@ -18,6 +18,7 @@ const RadAnat = Loadable(lazy(() => import('pages/projects/pages/RadAnat')));
 const Blog = Loadable(lazy(() => import('pages/blog')));
 
 const ImplementRepository = Loadable(lazy(() => import('pages/blog/pages/implementRepository/ImplementRepository')));
+const Solid = Loadable(lazy(() => import('pages/blog/pages/solid/Solid')));
 
 const Contact = Loadable(lazy(() => import('pages/contact')));
 
@@ -66,6 +67,10 @@ const MainRoutes = {
     {
       path: 'blog/implement-repository-aspnet-core',
       element: <ImplementRepository />
+    },
+    {
+      path: 'blog/solid-design-principles',
+      element: <Solid />
     },
     {
       path: 'contact',
