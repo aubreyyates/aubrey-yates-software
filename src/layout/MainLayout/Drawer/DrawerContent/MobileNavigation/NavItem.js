@@ -12,7 +12,7 @@ import { activeItem } from 'store/reducers/menu';
 
 // ==============================|| NAVIGATION - LIST ITEM ||============================== //
 
-const NavItem = ({ item, level }) => {
+const NavItem = ({ item, level, setOpen }) => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -31,6 +31,7 @@ const NavItem = ({ item, level }) => {
 
   const itemHandler = (id) => {
     dispatch(activeItem({ openItem: [id] }));
+    setOpen(false);
   };
 
   const Icon = item.icon;

@@ -87,7 +87,7 @@ const MobileSection = () => {
               <ClickAwayListener onClickAway={handleClose}>
                 <AppBar color="inherit">
                   <Toolbar>
-                    <MobileNavigation></MobileNavigation>
+                    <MobileNavigation setOpen={setOpen}></MobileNavigation>
                   </Toolbar>
                 </AppBar>
               </ClickAwayListener>
