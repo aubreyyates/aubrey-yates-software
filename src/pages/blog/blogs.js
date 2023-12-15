@@ -1,6 +1,14 @@
 const blogs = [
   {
     id: 1,
+    name: 'RESTful APIs',
+    description: 'What are RESTful APIs.',
+    link: 'restful-apis',
+    imageUrl: 'restful',
+    technologies: ['dotnet']
+  },
+  {
+    id: 1,
     name: 'SOLID Design Principles',
     description: 'What are SOLID design principle.',
     link: 'solid-design-principles',
