@@ -28,7 +28,7 @@ const Typography = () => ({
     fontWeight: 900,
     fontSize: '1.25rem',
     lineHeight: 1.4,
-    fontFamily: "'Comfortaa', sans-serif"
+    fontFamily: "'Manrope', sans-serif"
   },
   h5: {
     fontWeight: 900,
