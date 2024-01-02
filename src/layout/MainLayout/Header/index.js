@@ -39,7 +39,7 @@ const Header = ({ open, handleDrawerToggle }) => {
           color: 'text.primary',
           bgcolor: open ? iconBackColorOpen : iconBackColor,
           ml: { xs: 0, lg: -2 },
-          display: { xs: 'none', lg: 'block' }
+          display: { xs: 'none', lg: 'inherit' }
         }}
       >
         {!open ? <KeyboardArrowRightIcon /> : <KeyboardArrowLeftIcon />}
