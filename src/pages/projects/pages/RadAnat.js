@@ -11,7 +11,7 @@ const project = {
 const technologies = ['Electron JS', 'JavaScript', 'JQuery', 'HTML', 'CSS'];
 
 const links = {
-  code: 'https://github.com/aubreyyates'
+  code: null
 };
 
 const RadAnat = () => {

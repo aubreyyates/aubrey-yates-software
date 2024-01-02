@@ -18,19 +18,21 @@ const ProjectPage = ({ project: project, technologies: technologies, links: link
         ))}
       </Grid>
       <Grid item xs={12} sx={{ mb: -2.25, p: 1 }}>
-        <Button
-          component={Link}
-          to={links.code}
-          variant="outlined"
-          target="_blank"
-          color="secondary"
-          sx={{ width: '80px', color: 'text.primary', bgcolor: 'grey.100' }}
-        >
-          <GithubOutlined />
-          <Typography variant="p" sx={{ ml: 1 }}>
-            Repo
-          </Typography>
-        </Button>
+        {links.code != null && (
+          <Button
+            component={Link}
+            to={links.code}
+            variant="outlined"
+            target="_blank"
+            color="secondary"
+            sx={{ width: '80px', color: 'text.primary', bgcolor: 'grey.100' }}
+          >
+            <GithubOutlined />
+            <Typography variant="p" sx={{ ml: 1 }}>
+              Repo
+            </Typography>
+          </Button>
+        )}
       </Grid>
       <Grid item xs={12} sx={{ mb: -2.25, p: 1 }}>
         {children}
