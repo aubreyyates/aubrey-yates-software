@@ -17,7 +17,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 // ==============================|| HEADER - CONTENT ||============================== //
 
 const HeaderContent = () => {
-  const matchesXs = useMediaQuery((theme) => theme.breakpoints.down('md'));
+  const matchesXs = useMediaQuery((theme) => theme.breakpoints.down('lg'));
   const { toggleTheme, themeMode } = useContext(ThemeToggleContext);
 
   return (
@@ -40,7 +40,7 @@ const HeaderContent = () => {
       </IconButton>
 
       <Button
-        sx={{ width: { xs: '100%', sm: '250px' }, ml: 1, display: { xs: 'none', sm: 'inherit' } }}
+        sx={{ width: { xs: '100%', sm: '250px' }, ml: 1, display: { xs: 'none', lg: 'inherit' } }}
         variant="outlined"
         size="medium"
         component={Link}
