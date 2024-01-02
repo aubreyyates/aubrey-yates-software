@@ -28,7 +28,7 @@ const Contact = () => {
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: '50vh', position: 'relative' }} content={false}>
           <Grid container>
-            <Grid item xs={12} md={4} sx={{ p: 6 }}>
+            <Grid item xs={12} md={4} sx={{ p: 2 }}>
               <Typography variant="h4">
                 Send me mail or call me.
                 <br />
