@@ -1,9 +1,10 @@
 import { useTheme } from '@mui/material/styles';
 // import CodeSnippet from 'components/CodeSnippet'
-import { sublime } from '@uiw/codemirror-theme-sublime';
-// import { csharp } from '@codemirror/lang-csharp';
+// import { sublime } from '@uiw/codemirror-theme-sublime';
+import { javascript } from '@codemirror/lang-javascript';
 import CodeMirror from '@uiw/react-codemirror';
-import { csharp } from '@replit/codemirror-lang-csharp';
+import { vscodeDark } from '@uiw/codemirror-theme-vscode';
+// import { csharp } from '@replit/codemirror-lang-csharp';
 import { Box, Typography } from '../../../node_modules/@mui/material/index';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -34,7 +35,7 @@ const CodeSnippetContainer = ({ code, speed = 50 }) => {
           <Typography varient="h4">Code Editor</Typography>
         </Box>
         <Box sx={{ height: '309px' }}>
-          <CodeMirror value={code.substring(0, index)} height="305px" extensions={[csharp({ jsx: true })]} theme={sublime} />
+          <CodeMirror value={code.substring(0, index)} height="305px" extensions={[javascript({ jsx: true })]} theme={vscodeDark} />
         </Box>
       </Box>
     </div>

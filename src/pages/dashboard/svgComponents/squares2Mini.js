@@ -14,7 +14,7 @@ import './glow.css';
 
 // ==============================|| LOGO SVG ||============================== //
 
-const Squares1Mini = () => {
+const Squares2Mini = () => {
   const theme = useTheme();
 
   return (
@@ -52,4 +52,4 @@ const Squares1Mini = () => {
   );
 };
 
-export default Squares1Mini;
+export default Squares2Mini;

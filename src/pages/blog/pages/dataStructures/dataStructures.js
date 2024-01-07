@@ -1,4 +1,4 @@
-import CodeSnippet from 'components/CodeSnippet';
+// import CodeSnippet from 'components/CodeSnippet';
 import BlogPage from '../../BlogPage';
 
 import 'highlight.js/styles/vs2015.css';
