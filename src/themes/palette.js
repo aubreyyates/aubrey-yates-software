@@ -81,7 +81,8 @@ const Palette = (mode) => {
             divider: '#000',
             background: {
               paper: paletteColor.darkBlue[900],
-              default: '#000'
+              default: '#000',
+              gradient: 'linear-gradient(360deg, rgba(0,0,0,1) 0%, rgb(25 34 51) 100%);'
             }
           })
     }

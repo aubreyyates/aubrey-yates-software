@@ -45,10 +45,10 @@ const MainLayout = () => {
   }, [drawerOpen]);
 
   return (
-    <Box sx={{ display: 'flex', width: '100%' }}>
+    <Box sx={{ display: 'flex', width: '100%', background: theme.palette.background.gradient }}>
       <Header open={open} handleDrawerToggle={handleDrawerToggle} />
       <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />
-      <Box component="main" sx={{ width: '100%', flexGrow: 1, p: { xs: 2, sm: 3 }, mt: 7 }}>
+      <Box component="main" sx={{ width: '100%', flexGrow: 1, mt: 7 }}>
         {/* <Toolbar /> */}
         {/* <Breadcrumbs navigation={navigation} title /> */}
         <Outlet context={open} />
