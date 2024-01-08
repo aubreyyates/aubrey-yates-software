@@ -33,7 +33,7 @@ const Squares1 = () => {
           <rect x="46" y="126" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect x="46" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect x="256" y="42" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.07" />
-          <rect x="382" y="84" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.07" />
+          <rect x="382" y="84" width="36" height="36" fill={theme.palette.primary.main} className="glow-5" />
           <rect x="214" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect x="4" y="42" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect x="4" width="36" height="36" fill={theme.palette.primary.main} fillOpacity="0.15" />

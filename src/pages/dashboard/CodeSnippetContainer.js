@@ -9,7 +9,7 @@ import { Box, Typography } from '../../../node_modules/@mui/material/index';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const CodeSnippetContainer = ({ code, speed = 50 }) => {
+const CodeSnippetContainer = ({ code, speed = 50, height = '305px' }) => {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
 
@@ -25,17 +25,18 @@ const CodeSnippetContainer = ({ code, speed = 50 }) => {
       <Box
         sx={{
           background: theme.palette.primary.darker,
-          height: '345px',
           borderRadius: '5px',
           boxShadow: '3px 3px 12px 0px rgba(0,0,0,0.75)',
           border: '2px solid #303841'
         }}
       >
         <Box sx={{ background: '#000', p: 1, textAlign: 'center', height: '36px' }}>
-          <Typography varient="h4">Code Editor</Typography>
+          <Typography varient="h4" sx={{ color: '#fff' }}>
+            Code Editor
+          </Typography>
         </Box>
-        <Box sx={{ height: '309px' }}>
-          <CodeMirror value={code.substring(0, index)} height="305px" extensions={[javascript({ jsx: true })]} theme={vscodeDark} />
+        <Box>
+          <CodeMirror value={code.substring(0, index)} height={height} extensions={[javascript({ jsx: true })]} theme={vscodeDark} />
         </Box>
       </Box>
     </div>

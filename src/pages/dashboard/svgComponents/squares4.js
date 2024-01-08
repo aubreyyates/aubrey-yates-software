@@ -1,5 +1,6 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
+import './glow.css';
 
 /**
  * if you want to use image instead of <svg> uncomment following.
@@ -204,7 +205,7 @@ const Squares4 = () => {
             height="36"
             transform="rotate(-180 376 246)"
             fill={theme.palette.primary.main}
-            fillOpacity="0.36"
+            className="glow-5"
           />
           <rect
             x="376"

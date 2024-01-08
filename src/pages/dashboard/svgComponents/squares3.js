@@ -31,7 +31,7 @@ const Squares3 = () => {
           <rect width="36" height="36" transform="matrix(1 0 0 -1 172 246)" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 88 204)" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 46 330)" fill={theme.palette.primary.main} fillOpacity="0.15" />
-          <rect width="36" height="36" transform="matrix(1 0 0 -1 256 288)" fill={theme.palette.primary.main} fillOpacity="0.07" />
+          <rect width="36" height="36" transform="matrix(1 0 0 -1 256 288)" fill={theme.palette.primary.main} className="glow-3" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 172 330)" fill={theme.palette.primary.main} fillOpacity="0.39" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 340 330)" fill={theme.palette.primary.main} fillOpacity="0.07" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 340 288)" fill={theme.palette.primary.main} fillOpacity="0.07" />
@@ -46,8 +46,8 @@ const Squares3 = () => {
           <rect width="36" height="36" transform="matrix(1 0 0 -1 172 288)" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 298 203)" fill={theme.palette.primary.main} fillOpacity="0.15" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 298 162)" fill={theme.palette.primary.main} fillOpacity="0.06" />
-          <rect width="36" height="36" transform="matrix(1 0 0 -1 88 288)" fill={theme.palette.primary.main} fillOpacity="0.31" />
-          <rect width="36" height="36" transform="matrix(1 0 0 -1 46 120)" fill={theme.palette.primary.main} fillOpacity="0.05" />
+          <rect width="36" height="36" transform="matrix(1 0 0 -1 88 288)" fill={theme.palette.primary.main} className="glow-5" />
+          <rect width="36" height="36" transform="matrix(1 0 0 -1 46 120)" fill={theme.palette.primary.main} className="glow-5" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 130 246)" fill={theme.palette.primary.main} fillOpacity="0.05" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 256 78)" fill={theme.palette.primary.main} fillOpacity="0.06" />
           <rect width="36" height="36" transform="matrix(1 0 0 -1 214 120)" fill={theme.palette.primary.main} fillOpacity="0.2" />
