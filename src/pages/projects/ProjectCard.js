@@ -17,7 +17,7 @@ const ProjectCard = ({ project: project }) => {
     <ComponentSkeleton>
       <Grid item xs={12} md={6} lg={4}>
         <Link to={project.link} style={{ textDecoration: 'none' }}>
-          <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: '302px' }} content={false}>
+          <MainCard sx={{ mt: 2, boxShadow: 2, height: '340px' }} content={false}>
             <Grid item sx={{ postition: 'relative' }}>
               {project.technologies.includes('php') && <Php />}
               {project.technologies.includes('react') && <React />}
