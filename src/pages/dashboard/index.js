@@ -70,7 +70,7 @@ const DashboardDefault = () => {
 
           <CodeSnippetContainer code={snippet1} />
           <Grid container sx={{ height: '400px' }}>
-            <Grid item xs={3} md={4} sx={{ paddingLeft: { xs: '40px', md: '120px' } }}>
+            <Grid item xs={3} md={4} sx={{ paddingLeft: { xs: '20px', vs: '40px', md: '120px' } }}>
               <Line></Line>
             </Grid>
             <Grid item xs={9} md={8} sx={{ pl: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -86,15 +86,15 @@ const DashboardDefault = () => {
           </Grid>
           <CodeSnippetContainer code={snippet2} height="185px" />
           <Grid container>
-            <Grid item xs={3} md={4} sx={{ paddingLeft: { xs: '40px', md: '120px' }, height: '700px', position: 'relative' }}>
+            <Grid item xs={3} md={4} sx={{ paddingLeft: { xs: '5px', vs: '25px', md: '105px' }, height: '700px', position: 'relative' }}>
               <img src={line5} alt="line5" />
-              <Box sx={{ position: 'absolute', top: '342.3px', left: { xs: '51px', md: '131px' } }}>
+              <Box sx={{ position: 'absolute', top: '342.3px', left: { xs: '16px', vs: '36px', md: '116px' } }}>
                 <Gear1 />
               </Box>
             </Grid>
             <Grid item xs={9} md={8}>
               <Grid>
-                <Grid item xs={12} sx={{ pl: 4, mt: { xs: 9, md: 21 }, height: { xs: '238px', md: '143px' } }}>
+                <Grid item xs={12} sx={{ pl: 4, mt: { xs: 4, vs: 9, md: 21 }, height: { xs: '278px', vs: '238px', md: '143px' } }}>
                   <Reveal>
                     <Typography varient="h3" sx={{ fontSize: '22px' }}>
                       I have experience in major frameworks.

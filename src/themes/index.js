@@ -25,6 +25,7 @@ export default function ThemeCustomization({ themeMode: themeMode, children }) {
       breakpoints: {
         values: {
           xs: 0,
+          vs: 412,
           sm: 768,
           md: 1024,
           lg: 1266,
