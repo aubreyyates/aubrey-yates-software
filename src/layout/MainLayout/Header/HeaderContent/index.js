@@ -1,7 +1,8 @@
 // material-ui
 import { Box, IconButton, useMediaQuery } from '@mui/material';
 import { GithubOutlined } from '@ant-design/icons';
-import { Link } from '@mui/material/index';
+import { Link as LinkMaterial } from '@mui/material/index';
+import { Link as LinkReact } from 'react-router-dom';
 
 // project import
 import Search from './Search';
@@ -26,7 +27,7 @@ const HeaderContent = () => {
       {matchesXs && <Box sx={{ width: '100%', ml: 1 }} />}
 
       <IconButton
-        component={Link}
+        component={LinkMaterial}
         href="https://github.com/aubreyyates"
         target="_blank"
         color="secondary"
@@ -43,7 +44,7 @@ const HeaderContent = () => {
         sx={{ width: { xs: '100%', sm: '250px' }, ml: 1, display: { xs: 'none', lg: 'inherit' } }}
         variant="outlined"
         size="medium"
-        component={Link}
+        component={LinkReact}
         to="contact"
       >
         Contact Me
