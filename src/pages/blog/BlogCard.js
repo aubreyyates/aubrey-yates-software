@@ -14,7 +14,7 @@ const BlogCard = ({ blog: blog }) => {
     <ComponentSkeleton>
       <Grid item xs={12} md={6} lg={4}>
         <Link to={blog.link} style={{ textDecoration: 'none' }}>
-          <MainCard sx={{ mt: 2, boxShadow: 2, height: '500px' }} content={false}>
+          <MainCard sx={{ mt: 2, boxShadow: 2, minHeight: { lg: '500px' } }} content={false}>
             <Grid item sx={{ position: 'relative' }}>
               {blog.technologies.includes('dotnet') && <DotNet />}
               {/* ({blog.technologies.contains('react')} && <DotNet />)
