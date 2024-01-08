@@ -1,7 +1,7 @@
 // material-ui
 import { Box, IconButton, useMediaQuery } from '@mui/material';
 import { GithubOutlined } from '@ant-design/icons';
-import { Link } from '../../../../../node_modules/react-router-dom/dist/index';
+import { Link } from '@mui/material/index';
 
 // project import
 import Search from './Search';
