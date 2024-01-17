@@ -17,13 +17,13 @@ const RestfulApis = () => {
     <BlogPage blog={blog} technologies={technologies}>
       RESTful APIs are APIs that follow a set of principles. These REST principles are a standard for many APIs on the web. Rarely do all
       REST principles get implemented. Some of them can be difficult to achieve perfectly across every API. It is still a good practice to
-      implement REST standards in your API, even if you {"can't"} implement everyone.
+      implement REST standards in your API, even if you {"can't"} implement every one.
       <br />
       <br />
-      There are seven principles with a code example we will look at.
+      There are seven principles we will look at. We will also look at some code examples.
       <br />
       <br />
-      The first principle is Client-Server archetecture. This principle states that the client and server should be seperate from each
+      The first principle is Client-Server architecture. This principle states that the client and server should be seperate from each
       other. The presentation front end and API backend can change independantly of one another. For example, if your API sends HTML ready
       to be rendered on the frontend, that would violate this principle. Instead, it should send data in a format such as JSON. Then, the
       client will figure out how to display it.
