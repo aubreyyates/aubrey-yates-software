@@ -30,23 +30,15 @@ const blogs = [
     link: 'clean-architecture',
     imageUrl: 'cleanArchitecture',
     technologies: ['dotnet']
+  },
+  {
+    id: 5,
+    name: 'Data Structures',
+    description: 'A quick guide to data structures.',
+    link: 'data-structures',
+    imageUrl: 'dataStructures',
+    technologies: ['dotnet']
   }
-  // {
-  //   id: 4,
-  //   name: 'GIT',
-  //   description: 'A quick guide to git.',
-  //   link: 'quick-guide-to-git',
-  //   imageUrl: 'git',
-  //   technologies: ['dotnet']
-  // },
-  // {
-  //   id: 5,
-  //   name: 'Data Structures',
-  //   description: 'A quick guide to data structures.',
-  //   link: 'quick-guide-to-data-structures',
-  //   imageUrl: 'git',
-  //   technologies: ['dotnet']
-  // }
 ];
 
 export default blogs;
