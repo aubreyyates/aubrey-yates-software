@@ -9,7 +9,7 @@ import snippet2 from './codeSnippets/2.js';
 import snippet3 from './codeSnippets/3.js';
 
 const blog = {
-  name: 'Implement a repository in ASP.NET Core'
+  name: 'Data Structures'
 };
 
 const technologies = ['ASP.NET Core 8', 'C#'];

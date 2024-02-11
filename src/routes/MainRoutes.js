@@ -21,7 +21,7 @@ const ImplementRepository = Loadable(lazy(() => import('pages/blog/pages/impleme
 const Solid = Loadable(lazy(() => import('pages/blog/pages/solid/Solid')));
 const RestfulApis = Loadable(lazy(() => import('pages/blog/pages/restfulApis/RestfulApis')));
 const CleanArchitecture = Loadable(lazy(() => import('pages/blog/pages/cleanArchitecture/CleanArchitecture')));
-const DataStructures = Loadable(lazy(() => import('pages/blog/pages/dataStructures/DataStructures')));
+const DataStructuresGuide = Loadable(lazy(() => import('pages/blog/pages/dataStructuresGuide/DataStructuresGuide')));
 
 const Contact = Loadable(lazy(() => import('pages/contact')));
 
@@ -85,7 +85,7 @@ const MainRoutes = {
     },
     {
       path: 'blog/data-structures',
-      element: <DataStructures />
+      element: <DataStructuresGuide />
     },
     {
       path: 'contact',
