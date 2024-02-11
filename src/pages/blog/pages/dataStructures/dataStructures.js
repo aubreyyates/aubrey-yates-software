@@ -6,6 +6,7 @@ import CodeSnippet from 'components/CodeSnippet';
 
 import snippet1 from './codeSnippets/1.js';
 import snippet2 from './codeSnippets/2.js';
+import snippet3 from './codeSnippets/3.js';
 
 const blog = {
   name: 'Implement a repository in ASP.NET Core'
@@ -44,8 +45,12 @@ const DataStructures = () => {
       A Queue is a linear structure where elements that are put in first come out first. To get the latest element that was put in the
       queue, you will have to remove all of the elements that were put in before the latest element.
       <br />
-      <br />A common non-linear structure is a binary tree. The binary tree has a root element at the top of the tree. Each node in the tree
-      has up to two children. The tree can be traversed in many different ways.
+      <br />A common non-linear structure is a binary tree. The binary tree has a root node at the top of the tree. Each node in the tree
+      has up to two children. The tree node contains a pointer to the left and right children nodes. If a pointer is null, it {
+        "doesn't"
+      }{' '}
+      contain a child node yet. Here is the code for a tree node.
+      <CodeSnippet language="csharp">{snippet3}</CodeSnippet>
     </BlogPage>
   );
 };
