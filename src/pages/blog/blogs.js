@@ -22,6 +22,14 @@ const blogs = [
     link: 'implement-repository-aspnet-core',
     imageUrl: 'repository',
     technologies: ['dotnet']
+  },
+  {
+    id: 4,
+    name: 'Clean Architecture',
+    description: 'What is Clean architecture.',
+    link: 'clean-architecture',
+    imageUrl: 'cleanArchitecture',
+    technologies: ['dotnet']
   }
   // {
   //   id: 4,

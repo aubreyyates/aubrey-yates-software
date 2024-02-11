@@ -20,6 +20,7 @@ const Blog = Loadable(lazy(() => import('pages/blog')));
 const ImplementRepository = Loadable(lazy(() => import('pages/blog/pages/implementRepository/ImplementRepository')));
 const Solid = Loadable(lazy(() => import('pages/blog/pages/solid/Solid')));
 const RestfulApis = Loadable(lazy(() => import('pages/blog/pages/restfulApis/RestfulApis')));
+const CleanArchitecture = Loadable(lazy(() => import('pages/blog/pages/cleanArchitecture/CleanArchitecture')));
 
 const Contact = Loadable(lazy(() => import('pages/contact')));
 
@@ -76,6 +77,10 @@ const MainRoutes = {
     {
       path: 'blog/restful-apis',
       element: <RestfulApis />
+    },
+    {
+      path: 'blog/clean-architecture',
+      element: <CleanArchitecture />
     },
     {
       path: 'contact',

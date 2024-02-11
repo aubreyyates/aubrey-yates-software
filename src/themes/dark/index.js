@@ -34,9 +34,6 @@ const DarkTheme = (colors) => {
     900: '#1c1e27'
   };
 
-  // "#262832"
-  // "#1c1e27"
-
   const orange = {
     300: '#e1932e'
   };
